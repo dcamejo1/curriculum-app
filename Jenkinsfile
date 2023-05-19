@@ -17,7 +17,11 @@ pipeline {
 
         stage('Front-End Unit Tests') {
           steps {
-            sh 'cd curriculum-front && npm i && npm install --save-dev vue-jest && npm run test:unit'
+            sh '''cd curriculum-front && 
+ npm i &&
+ npm install --save-dev vue-jest &&
+npx update-browserslist-db@latest &&
+ npm run test:unit'''
           }
         }
 
