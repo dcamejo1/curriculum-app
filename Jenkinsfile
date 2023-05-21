@@ -19,8 +19,6 @@ pipeline {
           steps {
             sh '''cd curriculum-front && 
  npm i &&
- npm install --save-dev vue-jest &&
-npx update-browserslist-db@latest &&
  npm run test:unit'''
           }
         }
